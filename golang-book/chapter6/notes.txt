@@ -1,0 +1,79 @@
+Chapter 6 Arrays, Slices, and Maps
+
+-Arrays
+Fixed length, single type. 
+
+//x is an array of 5 integers.
+var x [5]int
+
+Short syntax for creating arrays:
+x := [5]float64{ 98, 93, 77, 82, 83}
+
+OR
+
+x := [5]float64{
+1,
+2,
+3,
+45,
+}
+
+^^You need a comment ofr the last cell so that it could be easily dommnted out.
+If you really comment the last cell out, then you also need to change the
+size of the array since it is part of the array type name. ^^
+
+Slices
+Represent segments of arrays. Are indexable and have a length.
+The only difference is that the length could change.
+
+In declarations:
+var x[]float64
+
+the only difference is that there is a number missing in the [].
+In this case, x has been created with a length of 0.
+
+To create a slixe, use the built in make function:
+x := make([]float64, 5)
+
+^^Creates a slice x with a float array of length 5.^^
+the make function allows a third parameter to represent 
+the size of the "parent" array. 
+
+ONE MORE WAY
+arr := []float64{1,2,3,4,5}
+x := arr[0:5]
+^^Indicates range from indicies^^
+ALSO:
+the high is never included
+[low:high]
+[0:5] //Elements from 0-4
+[0:] // Elements from 0-end
+[:3] // Elements from 0 to 2
+[:] // All elements, from beginning to end
+
+-- Slice Functions
+append(slices or arguments)
+copy(destination, source)
+
+
+Maps / Associative arrays / Hash table / Dictionary
+Unordered collection of key value pairs.
+Lookups are dependent upon a key.
+
+Example declaration:
+var x map[string]int
+
+^^key type in brackets, and then the value type^^
+##Rules of thumb with slices:##
+Always associated with some array and can never be longer. 
+
+there is a delete function
+delete(x, 1)
+*the name of the map and the key*g
+
+elements := map[string]string{
+  "H" : "Hydrogen",
+  "He": "Helium", 
+  "Li": "Lithium",
+}
+

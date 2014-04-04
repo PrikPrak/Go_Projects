@@ -1,0 +1,30 @@
+Idioms?
+
+-- Go will fight the shit out of you if you do this
+func main()
+{
+}
+
+instead of 
+
+func main(){
+}
+
+
+-- no break in case?
+
+-- ifs need no else
+
+-- floats don't include .0?
+
+-- you can print arrays just by printing
+   the variable name
+
+-- 5 / 10.0, type promotion? Book said yes, results say no
+-- Println(float64/len(y))
+
+-- really ugly comma at the last element of an array
+-- legnth of arrays are fixed and part of the aray's type name.
+
+-- WTF? name, ok := elements["Un"]
+-- returning two different values?
