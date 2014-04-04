@@ -1,5 +1,5 @@
 /*
-Problem #1: Hello World
+Problem #2: The Value 6
 Author: Corey Prak
 Date Created: 04/03/2014
 Comments:
@@ -10,5 +10,5 @@ package main
 import "fmt"
 
 func main(){
-  fmt.Println("Hello World!")
+  fmt.Println("6")
 }
