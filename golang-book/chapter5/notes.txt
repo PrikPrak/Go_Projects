@@ -1,0 +1,43 @@
+Chapter 5 Control Structures
+
+fmt.Println(1)
+fmt.Println(2)
+fmt.Println(3)
+
+is equivalent to
+
+fmt.Println('1
+2
+3')
+
+
+-For Loops
+for i <= 10 {
+  
+}
+
+OR
+
+for i := 1; i <= 10; i++{
+
+}
+
+
+-If 
+
+if *condition*
+
+if *condition*{
+}
+else if{
+}
+else if{
+}
+*No else needed at the end!!!*
+
+
+switch i{
+  case *comparatorthingy*: *expression*
+  default
+}
+
