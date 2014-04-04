@@ -1,0 +1,39 @@
+Variables
+Created by using the var keyword, then specifying the variable name, and then
+its type. 
+
+
++= exists
+
+
+shorthand way of defining and declaring
+x := "Hi"
+Type not needed. Inferencing done. This can also be done on var:
+x := 5 
+fmt.Println(x)
+
+
+How to Name a Variable
+- MUST start with a letter, contain letters, numbers, or _.
+- Camel case I, I guess?
+
+To quote the language specification "Go is lexically scoped using blocks"
+
+
+Constants
+const keyword
+
+
+Multiple Variables
+var(
+  a = 5
+  b = 6
+  c = 7
+  d = 9
+)
+
+I/O
+fmt.Println
+fmt.Print
+fmt.Scanf("%", &)
+
