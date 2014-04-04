@@ -1,0 +1,47 @@
+Data Types
+
+Numbers
+
+--Integers
+uint8, uint16, uint32, uint64, int8, int16, int32, int64
+
+alias types: byte - uint8, rune - uint32
+
+machine dependent integer types: uint, int, uintptr
+independent because size depends on the architecture.
+
+--Floating Point Numbers
+two types: float32 and float64
+
+additional types for complex numbers: complex64 and complex128
+
+NaN for things like 0/0
+positive and negative infinity
+
+
+OPERATORS
++ addition
+- subtraction
+* multiplication
+/ division
+% remainder
+
+
+Strings
+- Made up of individual bytes, usually one for each character.
+- Can be created using double quotes "" or backticks ``
+--Double quoted strings cannot contain newlines and allow escape sequences.
+
+
+Common Operations
+- length of a string len("Hello World")
+- accessing an individual character "Hello World"[1]
+- concatenating two strings together "Hello " + "World"
+
+
+Booleans
+&& And 
+|| Or
+! Not
+true 
+false
