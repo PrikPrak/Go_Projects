@@ -1,0 +1,41 @@
+Arrays
+
+
+An array is a collection of data. Each item of the collection is usually referred to as an element or cell, of which are of the same type and contiguous in memory. Note that the size of an array is part of its type. Even if they are of the same type, An array of size 5 IS NOT of the same type as an array of size 6.
+
+
+  To declare an array:
+    var numberArray [3]int
+    
+    - Start with the keyword var.
+  	- name of the array (numberArray). 
+		- size of the array in brackets ([3]).
+		- data type of the array, which also dictates the type every element will have (int).
+
+  	Or, you can declare an array literal:
+    fruitArray := [2]string{"Apples", "Oranges"}
+
+    - Start with the name of the array
+		- Size of the array in brackets 
+    - Data type of the array
+    - Curly brackets to denote the start/end array content
+    - Content of the array separated by a comma
+
+    You could also replace the number in the square brackets with a ... which will have the compiler count the number of elements for you.
+
+
+		To denote a specific element:
+    numberArray[2]  
+
+    - Describe the name of the array. 
+    - Specify the element/cell of the array. 
+
+		The possible numbers allowed in the brackets depend on its size, and starts at 0 up to one less the size of the array (since 0 represents the first element). In the declaration example above, the only possible integers in the brackets are 0-2. Attempting to access an element beyond the scope of an array's size WILL result in an error. 
+
+    For example, referring again to our above example, the expression numberArray[10] ouput:
+      # command-line-arguments
+      ./example.go:18: invalid array index 10 (out of bounds for 3-element array) 
+
+    I would verbally refer to this particular element as, "The value at numberArray sub two." or, "The value of the nth cell at *name of array*, which is how I learned how to describe it when I learned C. 
+    
+    In Go, the most common usage of an array is to act as a storage component for slices, another datatype in Go. 
