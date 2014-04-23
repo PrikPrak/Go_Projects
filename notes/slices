@@ -1,13 +1,42 @@
 Slices
 
-A type of data structure that refers to all or part of an array, contiguously. By contiguously, I mean that the portion of elements of an array that a slice can refer to must be "together".
+A type of data structure that refers to a contiguous portion of an array. array is usually stored separately. By contiguous, I mean that the portion of elements of an array that a slice can refer to must be "together".
 
 For example, given an integer array of three elements:
 
   numArray := [3]int {2, 3, 4}
 
-In this particular example, a slice can refer to a single element ([2], [3], [4]), or a grouping of elements that are "together" ([2, 3], [3, 4], [2, 3, 4]).
+In this particular example a slice can refer to a single element ([2], [3], [4]), or a grouping of elements that are "together" ([2, 3], [3, 4], [2, 3, 4]). The way slices are declared kind of implies this. Referring to our array numArray...
+
+Normally declared:
+
+  //If an array exists and you would like the slice to refer to the entire array.
+  var exampleSlice1 []int = numArray[:]
+
+  OR
+
+  // Again, array exists and the slice should refer to the entire array. 
+  var exampleSlice2 []int 
+  exampleSlice = numArray[:]
+
+  OR
+
+  // Slice literal, allocate an array and have the slice reference it. 
+  var exampleSlice3 := []int{5, 6, 7}     
+
+Declaration Guidelines
+  - Normal Declaration: Start with the var keyword / Short Declaration: Start with the name of the slice
+  - Name of slice
+  - Slice data type declaration, which consists of [] and the particular data type of the array it is referring to
+  - assignment operator (=) or short declaration token (:=)
+  - name of an array (if it exists)
+  - range specification of which element(s) the slice will refer to
+  - 
+
+Range Specification
+
+I'm not sure what to call it, but it's the [:] group of symbols that come after an array which identify exactly which elements a slice refers to. There are a couple of ways 
+
   
 
-Understand that a slice is not an array, but that it refers to one, and also that the array is stored separately from the slice variable. 
 
