@@ -1,0 +1,13 @@
+Slices
+
+A type of data structure that refers to all or part of an array, contiguously. By contiguously, I mean that the portion of elements of an array that a slice can refer to must be "together".
+
+For example, given an integer array of three elements:
+
+  numArray := [3]int {2, 3, 4}
+
+In this particular example, a slice can refer to a single element ([2], [3], [4]), or a grouping of elements that are "together" ([2, 3], [3, 4], [2, 3, 4]).
+  
+
+Understand that a slice is not an array, but that it refers to one, and also that the array is stored separately from the slice variable. 
+
