@@ -8,6 +8,7 @@ This file was created with guifance from www.golang.org, "Writing Web Applicatio
 */
 
 
+
 package main
 
 import (
@@ -15,6 +16,8 @@ import (
   "io/ioutil"
   "net/http"
 )
+
+var templates = template.Must(template.ParseFiles("edit.html", "view.html"))
 
 //Body is a byte slice because it's the type expected by io libraries.
 type Page struct {
@@ -65,8 +68,13 @@ func editHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
-  t, _ := template.ParseFiles(tmpl + ".html")
-  t.Execute(w, p)
+//  t, _ := template.ParseFiles(tmpl + ".html")
+//  t.Execute(w, p)
+
+  err := templates.ExecuteTemplate(w, tmpl+".html", p)
+  if err != nil {
+    http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
 
 func saveHandler(w http.ResponseWriter, r *http.Request) {
